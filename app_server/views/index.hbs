@@ -1,0 +1,21 @@
+{{!< layouts/layout }}
+
+<section>
+  <h1>{{title}}</h1>
+  {{#if tagline}}<p class="tagline">{{tagline}}</p>{{/if}}
+
+  {{#if trips}}
+    <ul class="trip-list">
+      {{#each trips}}
+        <li class="trip">
+          <h2>{{destination}}</h2>
+          <p>Duration: {{duration}}</p>
+          <p>From: ${{price}}</p>
+          <p class="code">Code: {{code}}</p>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>No trips available right now. Check back soon.</p>
+  {{/if}}
+</section>
